@@ -1,7 +1,7 @@
 <?php
 
 //fetch all data
-$app->get('/api/books', function () {
+$app->get('/api/get-books', function () {
     require_once('dbconnect.php');
     $query = "select * from books order by id";
     $result = $mysqli->query($query);
@@ -16,7 +16,7 @@ $app->get('/api/books', function () {
 });
 
 // fetch single row 
-$app->get('/api/books/{id}', function ($request) {
+$app->get('/api/get-books/{id}', function ($request) {
     require_once('dbconnect.php');
     $id = $request->getAttribute('id');
     $query = "select * from books where id=$id";

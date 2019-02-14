@@ -18,6 +18,8 @@ $app = new \Slim\App;
 
 //     return $response;
 // });
-require_once('../app/api/books.php');
-require_once('../app/api/genres.php');
+require_once('../app/api/get-books.php');
+require_once('../app/api/post-books.php');
+require_once('../app/api/delete-books.php');
+require_once('../app/api/put-books.php');
 $app->run();
